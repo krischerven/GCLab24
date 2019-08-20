@@ -1,0 +1,20 @@
+!SESSION 2019-08-16 15:47:36.843 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=13
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-08-16 15:47:53.446
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2019-08-16 15:50:56.576 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=13
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-08-16 15:51:08.512
+!MESSAGE Using Apache MINA sshd as ssh client.
