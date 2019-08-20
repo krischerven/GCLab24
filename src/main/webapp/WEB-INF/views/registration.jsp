@@ -14,12 +14,12 @@
 <div class="row">
 	<div class="col">
 		<form action="post_registration" onsubmit="return validate();">
-		First Name:<input type="text" name="name1" id="name1" style="margin-left: 48px" value=""><br>
-		Last Name:<input type="text" name="name2" id="name2" style="margin-left: 50px" value=""><br>
-		City:<input type="text" name="city" id="city" style="margin-left: 92px" value=""><br>
-		Address:<input type="text" name="address" id="address" style="margin-left: 65px" value=""><br>
-		Phone #:<input type="text" name="phone" id="phone" style="margin-left: 63px" value=""><br>
-		Email:<input type="text" name="email" id="email" style="margin-left: 82px" value=""><br><br>
+		First Name:<input type="text" name="name1" id="name1" style="margin-left: 48px" value="" required><br>
+		Last Name:<input type="text" name="name2" id="name2" style="margin-left: 50px" value="" required><br>
+		City:<input type="text" name="city" id="city" style="margin-left: 92px" value="" required><br>
+		Address:<input type="text" name="address" id="address" style="margin-left: 65px" value="" required><br>
+		Phone #:<input type="text" name="phone" id="phone" style="margin-left: 63px" value="" required><br>
+		Email:<input type="text" name="email" id="email" style="margin-left: 82px" value="" required><br><br>
 		<input type="submit" value="Register!" class="btn btn-primary" style="color: #B3CBDD; margin-left: 50px"></input>
 		</form>
 		<br>
