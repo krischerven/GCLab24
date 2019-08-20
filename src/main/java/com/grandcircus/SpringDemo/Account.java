@@ -16,13 +16,14 @@ public class Account {
 		email = f;
 	}
 	public String getWelcomeMessage() {
-		String ret = "<h1 style=\"text-align: center\">" + "Welcome, " + firstName + " " + lastName + "!" + "</h1>" + "<br><br>";
-		ret += "<h3 style=\"text-align: center\">";
-		ret += ("City: " + city + "<br>");
-		ret += ("Address: " + address + "<br>");
-		ret += ("Phone: " + phone + "<br>");
-		ret += ("Email: " + email + "<br>");
-		ret += "</h3>";
+		String ret = "<h1 style=\"text-align: center\">" + "Welcome, " + firstName + " " + lastName + "!" + "</h1>";
+		ret += "<h3 style=\"text-align: center\">You've been registered.</h3><br><br>";
+		ret += "<h4 style=\"text-align: center\">";
+		ret += ("<strong>City</strong>: " + city + "<br>");
+		ret += ("<strong>Address</strong>: " + address + "<br>");
+		ret += ("<strong>Phone</strong>: " + phone + "<br>");
+		ret += ("<strong>Email</strong>: " + email + "<br>");
+		ret += "</h4>";
 		return ret;
 	}
 }
