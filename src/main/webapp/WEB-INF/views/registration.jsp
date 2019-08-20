@@ -13,7 +13,7 @@
 <br>
 <div class="row">
 	<div class="col">
-		<form action="post_registration" onsubmit="return validate();">
+		<form action="post_registration" method="post" onsubmit="return validate();">
 		First Name:<input type="text" name="name1" id="name1" style="margin-left: 48px" value="" required><br>
 		Last Name:<input type="text" name="name2" id="name2" style="margin-left: 50px" value="" required><br>
 		City:<input type="text" name="city" id="city" style="margin-left: 92px" value="" required><br>
