@@ -21,12 +21,12 @@ public class HomeController {
 	public ModelAndView gotoShop() {
 		return getDefaultModelAndView("shop", "modelName", "Hello World!");
 	}
-	@RequestMapping("registration")
+	@RequestMapping("/registration")
 	public ModelAndView gotoRegistration() {
 		return getDefaultModelAndView("registration", "modelName", "Hello World!");
 	}
 	
-	@RequestMapping("post_registration")
+	@RequestMapping("/post_registration")
 	public ModelAndView gotoPostRegistration(@RequestParam("name1") String a, @RequestParam("name2") String b, 
 			@RequestParam("city") String c, @RequestParam("address") String d, @RequestParam("phone") String e, @RequestParam("email") String f) {
 		return getDefaultModelAndView("post_registration", "user",  new Account(a, b, c, d, e, f));
