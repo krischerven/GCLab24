@@ -15,17 +15,23 @@ public class Database {
 	public List<Item> getAllItems() {
 		return template.query("select * from items;", new BeanPropertyRowMapper<Item>(Item.class));
 	}
-	public int addItem(String name, String description, int quantity, int price) {
+	public int addItem(Item item) {
 		final String query = "insert into items(name, description, quantity, price) values(?, ?, ?, ?);";
-		return template.update(query, name, description, quantity, price);
+		return template.update(query, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice());
 	}
 	public int remItem(int id) {
 		final String query = "delete from items where id = ?;";
 		return template.update(query, id);
 	}
+	public boolean remOneItem(Item item) {
+		List<Item> items = template.query("select * from items where item_name = '" + item.getName() + "' ;", new BeanPropertyRowMapper<Item>(Item.class));
+		items.get(0).setQuantity(items.get(0).getQuantity()-1);
+		updateItem(items.get(0));
+		return true;
+	}
 	public int updateItem(Item item) {
-		final String query = "update food set category = ?, description = ?, name = ? where id = ?;";
-		return template.update(query, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice());
+		final String query = "update items set item_name = ?, description = ?, quantity = ?, price = ? where item_name = ?;";
+		return template.update(query, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice(), item.getName());
 	}
 	// accounts
 	public int addAccount(Account acc) {

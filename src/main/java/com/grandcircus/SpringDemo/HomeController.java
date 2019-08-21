@@ -41,4 +41,9 @@ public class HomeController {
 		database.addAccount(acc);
 		return getDefaultModelAndView("post_registration", "user", acc);
 	}
+	@RequestMapping("/purchase_item")
+	public ModelAndView purchaseItem(@RequestParam("name") String a, @RequestParam("desc") String b, @RequestParam("quantity") int c, @RequestParam("price") int d) {
+		database.remOneItem(new Item(a, b, c, d));
+		return getDefaultModelAndView("index", null, null);
+	}
 }

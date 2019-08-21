@@ -19,7 +19,11 @@
 <div class="container">
 <h2>List of items:</h2>
 <c:forEach items="${items}" var="i">
-	<p>${i}</p><img src="${i.getImage()}" width=128 height=128></img>
+	<p>
+	${i} - <a href="purchase_item?name=${i.getName()}&desc=${i.getDescription()}&quantity=${i.getQuantity()}&price=${i.getPrice()}">PURCHASE</a>
+	<br>
+	<img src="${i.getImage()}" width=128 height=128></img>
+	</p>
 </c:forEach>
 </div>
 </body>
