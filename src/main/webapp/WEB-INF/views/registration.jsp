@@ -31,6 +31,6 @@
 <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 <footer>
-${copyright}
+${footer}
 </footer>
 </html>

@@ -141,6 +141,6 @@ function finishPurchase() {
 </script>
 </body>
 <footer>
-${copyright}
+${footer}
 </footer>
 </html>

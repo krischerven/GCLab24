@@ -13,6 +13,6 @@
 ${user.getWelcomeMessage()}
 </body>
 <footer>
-${copyright}
+${footer}
 </footer>
 </html>

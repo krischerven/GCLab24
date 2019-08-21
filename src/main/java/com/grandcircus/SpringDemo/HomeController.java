@@ -13,12 +13,16 @@ public class HomeController {
 	Database database;
 	public ModelAndView getDefaultModelAndView(String page, String name, Object object) {
 		ModelAndView m = new ModelAndView(page, name, object);
-		m.addObject("copyright", Utility.copyright());
+		m.addObject("footer", Utility.footer());
 		m.addObject("items", database.getAllItems());
 		return m;
 	}
 	@RequestMapping("/")
 	public ModelAndView home() {
+		return getDefaultModelAndView("index", "modelName", "Hello World!");
+	}
+	@RequestMapping("home")
+	public ModelAndView _home() {
 		return getDefaultModelAndView("index", "modelName", "Hello World!");
 	}
 	@RequestMapping("/shop")
