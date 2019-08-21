@@ -12,26 +12,26 @@ public class HomeController {
 	@Autowired
 	Database database;
 	public ModelAndView getDefaultModelAndView(String page, String name, Object object) {
-		ModelAndView m = new ModelAndView(page, name, object);
+		ModelAndView m = new ModelAndView(page, name != null ? name : "", object != null ? object : "");
 		m.addObject("footer", Utility.footer());
 		m.addObject("items", database.getAllItems());
 		return m;
 	}
 	@RequestMapping("/")
 	public ModelAndView home() {
-		return getDefaultModelAndView("index", "modelName", "Hello World!");
+		return getDefaultModelAndView("index", null, null);
 	}
 	@RequestMapping("home")
 	public ModelAndView _home() {
-		return getDefaultModelAndView("index", "modelName", "Hello World!");
+		return getDefaultModelAndView("index", null, null);
 	}
 	@RequestMapping("/shop")
 	public ModelAndView gotoShop() {
-		return getDefaultModelAndView("shop", "modelName", "Hello World!");
+		return getDefaultModelAndView("shop", null, null);
 	}
 	@RequestMapping("/registration")
 	public ModelAndView gotoRegistration() {
-		return getDefaultModelAndView("registration", "modelName", "Hello World!");
+		return getDefaultModelAndView("registration", null, null);
 	}
 	
 	@RequestMapping("/post_registration")
