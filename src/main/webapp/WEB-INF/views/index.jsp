@@ -9,10 +9,19 @@
 </head>
 <body>
 <br>
+<div class="container">
 <h1 style="text-align: center">GC Coffee Shop</h1>
 <br><br>
-<h3><a href="shop" style="margin-left: 25px">Click here to go to our shop</a></h3>
-<h3><a href="registration" style="margin-left: 25px">Click here to go to our registration page</a></h3>
+<h3><a href="shop">Click here to go to our shop</a></h3>
+<h3><a href="registration">Click here to go to our registration page</a></h3>
+</div>
+<br><br><br>
+<div class="container">
+<h2>List of items:</h2>
+<c:forEach items="${items}" var="i">
+	<p>${i}</p><img src="${i.getImage()}" width=128 height=128></img>
+</c:forEach>
+</div>
 </body>
 <footer>
 ${copyright}

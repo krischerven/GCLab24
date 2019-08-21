@@ -15,6 +15,26 @@ public class Account {
 		phone = e;
 		email = f;
 	}
+	// getters
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public String getCity() {
+		return city;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	// misc
 	public String getWelcomeMessage() {
 		String ret = "<h1 style=\"text-align: center\">" + "Welcome, " + firstName + " " + lastName + "!" + "</h1>";
 		ret += "<h3 style=\"text-align: center\">You've been registered.</h3><br><br><br><br><br>";
