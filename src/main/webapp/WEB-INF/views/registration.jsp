@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
+<br><br>
 <div class="container" style="border: 3px solid white;">
 <h2>Coffee Shop Staff Registration</h2>
 <h3><em>Please fill out the form below to register.</em></h3>
