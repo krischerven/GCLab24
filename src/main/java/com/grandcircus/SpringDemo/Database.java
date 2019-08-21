@@ -16,7 +16,7 @@ public class Database {
 		return template.query("select * from items;", new BeanPropertyRowMapper<Item>(Item.class));
 	}
 	public int addItem(Item item) {
-		final String query = "insert into items(name, description, quantity, price) values(?, ?, ?, ?);";
+		final String query = "insert into items(item_name, description, quantity, price) values(?, ?, ?, ?);";
 		return template.update(query, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice());
 	}
 	public int remItem(int id) {
