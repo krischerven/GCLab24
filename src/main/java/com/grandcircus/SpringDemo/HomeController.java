@@ -33,7 +33,6 @@ public class HomeController {
 	public ModelAndView gotoRegistration() {
 		return getDefaultModelAndView("registration", null, null);
 	}
-	
 	@RequestMapping("/post_registration")
 	public ModelAndView gotoPostRegistration(@RequestParam("name1") String a, @RequestParam("name2") String b, 
 			@RequestParam("city") String c, @RequestParam("address") String d, @RequestParam("phone") String e, @RequestParam("email") String f) {
