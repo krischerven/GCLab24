@@ -59,6 +59,9 @@ public class Item {
 			case "GC Leather Bag": {
 				return "https://cache.net-a-porter.com/images/products/904750/904750_in_pp.jpg";
 			}
+			case "Aromatic Coffee Beans": {
+				return "https://discoverdiscomfort.com/wp-content/uploads/2019/03/Arabic-Coffee-a-Complete-Guide-for-Coffee-Nerds-Turkish-Coffee-on-table--1024x683.jpg";
+			}
 			default: {
 				return "";
 			}
