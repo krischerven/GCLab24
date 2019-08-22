@@ -3,14 +3,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class Database {
 	@Autowired
 	JdbcTemplate template;
-	List<Item> items;
-	List<Account> accounts;
+	final List<Item> items = new ArrayList<Item>();
+	final List<Account> accounts = new ArrayList<Account>();
 	// items
 	public List<Item> getAllItems() {
 		return template.query("select * from items;", new BeanPropertyRowMapper<Item>(Item.class));

@@ -12,7 +12,7 @@
 <div class="container">
 <h1 style="text-align: center">GC Coffee Shop</h1>
 <br><br>
-<h3><a href="shop">Click here to go to our shop</a></h3>
+<h3><a href="shop">Click here to go to our coffee shop</a></h3>
 <h3><a href="registration">Click here to go to our registration page</a></h3>
 </div>
 <br><br><br>
