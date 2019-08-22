@@ -51,6 +51,7 @@ public class HomeController {
 		ModelAndView m = new ModelAndView("index", "", "");
 		m.addObject("footer", Utility.footer());
 		m.addObject("items", database.getAllItems(str));
+		m.addObject("no_items", database.getAllItems(str).size() > 0 ? "" : "No items were found that matched your filter.");
 		return m;
 	}
 }

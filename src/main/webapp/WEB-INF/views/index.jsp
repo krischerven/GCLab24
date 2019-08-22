@@ -22,6 +22,7 @@
 	<input type="submit" value="Update"/>
 </form>
 <h2>List of items:</h2>
+<h4><em>${no_items}</em></h4>
 <c:forEach items="${items}" var="i">
 	<p>
 	${i} - <a href="purchase_item?name=${i.getName()}&desc=${i.getDescription()}&quantity=${i.getQuantity()}&price=${i.getPrice()}">PURCHASE</a>
