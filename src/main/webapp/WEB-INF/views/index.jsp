@@ -18,7 +18,7 @@
 <br><br><br>
 <div class="container">
 <form action="/filter" method="post">
-	<input type="text" name="filter" placeholder="filter"/>
+	<input type="text" name="filter" placeholder="No filter"/>
 	<input type="submit" value="Update"/>
 </form>
 <h2>List of items:</h2>
