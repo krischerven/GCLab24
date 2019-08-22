@@ -17,8 +17,7 @@ public class Database {
 		return template.query("select * from items;", new BeanPropertyRowMapper<Item>(Item.class));
 	}
 	public List<Item> getAllItems(String filter) {
-		String query = "select * from items WHERE (item_name LIKE '%?%' OR description LIKE '%?%');";
-		query = query.replace("?", filter);
+		final String query = "select * from items WHERE (item_name LIKE '%?%' OR description LIKE '%?%');".replace("?", filter);
 		return template.query(query, new BeanPropertyRowMapper<Item>(Item.class));
 	}
 	public int addItem(Item item) {
