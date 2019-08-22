@@ -46,4 +46,11 @@ public class HomeController {
 		database.remOneItem(new Item(a, b, c, d));
 		return getDefaultModelAndView("index", null, null);
 	}
+	@RequestMapping("/filter")
+	public ModelAndView filter(@RequestParam("filter") String str) {
+		ModelAndView m = new ModelAndView("index", "", "");
+		m.addObject("footer", Utility.footer());
+		m.addObject("items", database.getAllItems(str));
+		return m;
+	}
 }

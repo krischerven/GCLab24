@@ -16,6 +16,11 @@ public class Database {
 	public List<Item> getAllItems() {
 		return template.query("select * from items;", new BeanPropertyRowMapper<Item>(Item.class));
 	}
+	public List<Item> getAllItems(String filter) {
+		String query = "select * from items WHERE (item_name LIKE '%?%' OR description LIKE '%?%');";
+		query = query.replace("?", filter);
+		return template.query(query, new BeanPropertyRowMapper<Item>(Item.class));
+	}
 	public int addItem(Item item) {
 		final String query = "insert into items(item_name, description, quantity, price) values(?, ?, ?, ?);";
 		return template.update(query, item.getName(), item.getDescription(), item.getQuantity(), item.getPrice());
